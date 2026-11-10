@@ -17,6 +17,52 @@ assigns tickets** to developers when it can't resolve an issue.
 - 💬 Persistent conversation memory
 - 📊 Evaluation suite to measure answer quality
 
+
+## folder structure
+
+brain/
+├── src/brain/
+│   ├── main.py              # app factory, router wiring, startup/shutdown
+│   ├── core/                # config, logging, security, exceptions, constants
+│   ├── api/
+│   │   ├── deps.py          # shared dependencies (db session, auth, services)
+│   │   └── v1/              # versioned routes
+│   │       ├── health.py
+│   │       ├── chat.py
+│   │       ├── tickets.py
+│   │       └── ingest.py
+│   ├── schemas/             # Pydantic request/response models (API contracts)
+│   ├── db/
+│   │   ├── session.py       # engine + session
+│   │   ├── models/          # SQLAlchemy tables
+│   │   └── repositories/    # data-access functions (queries live here)
+│   ├── services/            # business logic (chat, ticket, assignment)
+│   ├── ai/
+│   │   ├── llm/             # model clients, provider wrappers
+│   │   ├── prompts/         # prompt templates, versioned as files
+│   │   ├── embeddings/      # embedding model + batching
+│   │   ├── rag/
+│   │   │   ├── loaders/     # PDF, markdown, HTML readers
+│   │   │   ├── chunking/    # splitting strategies
+│   │   │   ├── retrieval/   # vector, keyword, hybrid, reranking
+│   │   │   └── pipeline.py  # ties the RAG steps together
+│   │   ├── graphrag/        # entity extraction, graph build, graph retrieval
+│   │   ├── agents/          # LangGraph: state, nodes, edges, graph builder
+│   │   ├── tools/           # tools the agent can call (create_ticket, search_docs)
+│   │   └── guardrails/      # input/output checks, injection defense
+│   └── utils/               # small shared helpers
+├── tests/
+│   ├── unit/
+│   ├── integration/
+│   └── evals/               # RAG/agent quality tests (question + expected answer)
+├── scripts/                 # ingest docs, seed db, run evals
+├── migrations/              # Alembic
+├── data/                    # sample/raw docs (gitignored if large)
+├── docs/
+├── pyproject.toml, uv.lock, .env.example, Dockerfile
+
+
+
 ## Tech Stack
 
 | Layer      | Technology                         |
