@@ -1,0 +1,74 @@
+# ───────── Secrets & environment ─────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+
+# ───────── Python ─────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.python-version.local
+
+# ───────── Tooling caches ─────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+.ipynb_checkpoints/
+
+# ───────── Frontend (Next.js) ─────────
+node_modules/
+.next/
+out/
+.vercel/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.tsbuildinfo
+next-env.d.ts
+
+# ───────── Database & local data ─────────
+*.sqlite3
+*.db
+pgdata/
+postgres-data/
+brain/data/raw/
+brain/data/processed/
+brain/data/vector_store/
+
+# ───────── AI / experiments ─────────
+.langgraph_api/
+.langchain/
+chroma/
+faiss_index/
+*.faiss
+evals/results/
+models/
+*.gguf
+
+# ───────── Logs ─────────
+*.log
+logs/
+
+# ───────── Docker overrides ─────────
+docker-compose.override.yml
+
+# ───────── IDE & OS ─────────
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

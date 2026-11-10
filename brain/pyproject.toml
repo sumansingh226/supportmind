@@ -1,0 +1,22 @@
+[project]
+name = "brain"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "suman.singh", email = "suman.singh@storeapps.org" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.162.3",
+    "pydantic-settings>=2.15.0",
+    "python-dotenv>=1.2.4",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+brain = "brain:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
