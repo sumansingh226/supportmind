@@ -140,6 +140,3 @@ uv run ruff check .        # lint
 - [ ] Ticketing and assignment
 - [ ] Next.js frontend
 - [ ] Auth, guardrails, observability, deployment
-
-## License
-
