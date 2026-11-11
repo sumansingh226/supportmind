@@ -143,4 +143,3 @@ uv run ruff check .        # lint
 
 ## License
 
-TBD
