@@ -59,7 +59,7 @@ brain/
 ├── migrations/              # Alembic
 ├── data/                    # sample/raw docs (gitignored if large)
 ├── docs/
-├── pyproject.toml, uv.lock, .env.example, Dockerfile
+├── pyproject.toml, uv.lock, .env.example
 
 
 
