@@ -1,5 +1,4 @@
 # SupportMind
-
 An AI customer support agent that answers questions from your product
 documentation using **RAG** and **GraphRAG**. When it can't resolve an issue,
 it **creates a ticket and assigns it** to a developer.
