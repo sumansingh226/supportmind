@@ -88,6 +88,3 @@ added as configuration grows.
 - [ ] Frontend (`lens`)
 - [ ] Auth, guardrails, observability, deployment
 
-## License
-
-See [LICENSE](LICENSE).
